@@ -535,6 +535,44 @@ body {
   color: #FF5656;
 }
 
+.memo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-input {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  color: #001B51;
+  background: #FFFFFF;
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 10px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px;
+  color: #FFFFFF;
+  background: #001B51;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 /* 반응형 */
 @media (max-width: 992px) {
   body {

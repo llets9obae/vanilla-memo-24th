@@ -85,13 +85,13 @@
       </div>
       <p class="modal-body" id="modalBody"></p>
       <div class="modal-actions">
-        <button type="button" class="modal-action-btn" aria-label="메모 수정">
+        <button type="button" class="modal-action-btn" data-action="edit" aria-label="메모 수정">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 20h9"></path>
             <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
           </svg>
         </button>
-        <button type="button" class="modal-action-btn" aria-label="메모 삭제">
+        <button type="button" class="modal-action-btn" data-action="delete" aria-label="메모 삭제">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 6h18"></path>
             <path d="M8 6V4h8v2"></path>
@@ -101,6 +101,26 @@
         </button>
       </div>
     </article>
+  </div>
+
+  <div class="modal-overlay" id="addMemoModal" role="dialog" aria-modal="true" aria-labelledby="addMemoTitle" hidden>
+    <form class="memo-form modal-card card-others" id="addMemoForm">
+      <div class="modal-header">
+        <h2 class="modal-title" id="addMemoTitle">새 메모 작성</h2>
+        <button type="button" class="modal-close-btn" id="addMemoCloseBtn" aria-label="닫기">&times;</button>
+      </div>
+      <label class="form-label" for="newMemoTitle">제목</label>
+      <input class="form-input" id="newMemoTitle" name="title" required maxlength="80" placeholder="제목을 입력하세요" />
+      <label class="form-label" for="newMemoContent">내용</label>
+      <textarea class="form-input form-textarea" id="newMemoContent" name="content" required maxlength="1000" placeholder="내용을 입력하세요"></textarea>
+      <label class="form-label" for="newMemoCategory">태그</label>
+      <select class="form-input" id="newMemoCategory" name="category">
+        <option value="Daily">Daily</option>
+        <option value="Work">Work</option>
+        <option value="Others" selected>Others</option>
+      </select>
+      <button class="form-submit" type="submit">메모 저장</button>
+    </form>
   </div>
 
   <script src="./js/memo.js"></script>
