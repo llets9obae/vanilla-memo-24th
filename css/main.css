@@ -49,7 +49,8 @@ body {
 .tag-badge {
   display: inline-flex;
   align-items: center;
-  width: 116px;
+  width: max-content;
+  min-width: 116px;
   height: 36px;
   gap: 8px;
   background-color: #E4EDFF;
@@ -61,6 +62,7 @@ body {
   border: none;
   cursor: pointer;
   flex-shrink: 0;
+  white-space: nowrap;
   transition: background-color 0.15s ease;
 }
 
@@ -73,6 +75,11 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  flex: 0 0 8px;
+}
+
+.arrow-icon {
+  flex: 0 0 16px;
 }
 
 .tag-dot.show {
@@ -411,11 +418,15 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(30, 41, 59, 0.45);
+  background: rgba(0, 27, 81, 0.48);
   backdrop-filter: blur(4px);
   align-items: center;
   justify-content: center;
   z-index: 100;
+}
+
+.modal-overlay[hidden] {
+  display: none;
 }
 
 .modal-overlay.active {
@@ -424,9 +435,10 @@ body {
 
 .modal-card {
   width: 90%;
-  max-width: 440px;
+  max-width: 384px;
+  min-height: 385px;
   border-radius: 20px;
-  padding: 28px;
+  padding: 28px 30px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.18);
   position: relative;
 }
@@ -439,15 +451,16 @@ body {
 }
 
 .modal-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
+  line-height: 28px;
 }
 
 .modal-close-btn {
   background: none;
   border: none;
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
   line-height: 1;
 }
@@ -455,7 +468,7 @@ body {
 .modal-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 18px;
 }
 
@@ -478,23 +491,29 @@ body {
 }
 
 .modal-date {
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.8;
 }
 
+.modal-divider {
+  width: 2px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
 .modal-body {
-  font-size: 13.5px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 20px;
   white-space: pre-wrap;
   margin-bottom: 28px;
   opacity: 0.95;
-  min-height: 120px;
+  min-height: 185px;
 }
 
 .modal-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 .modal-action-btn {

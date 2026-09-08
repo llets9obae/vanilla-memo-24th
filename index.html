@@ -17,6 +17,12 @@
             <polygon points="0,0 8,5 0,10" />
           </svg>
         </button>
+        <ul class="tag-dropdown" id="tagDropdown" aria-label="태그 필터">
+          <li data-tag="all">전체</li>
+          <li data-tag="Daily"><span class="dot-sample dot-daily"></span>Daily</li>
+          <li data-tag="Work"><span class="dot-sample dot-work"></span>Work</li>
+          <li data-tag="Others"><span class="dot-sample dot-others"></span>Others</li>
+        </ul>
       </div>
       <input class="search-input" type="text" placeholder="원하는 메모를 검색하세요" aria-label="메모 검색" />
       <button type="button" class="search-submit-btn" aria-label="검색">
@@ -65,6 +71,37 @@
       </div>
     </section>
   </main>
+
+  <div class="modal-overlay" id="memoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <article class="modal-card" id="modalCard">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">&times;</button>
+      </div>
+      <div class="modal-meta">
+        <span class="modal-tag-chip"><span class="modal-tag-dot" id="modalTagDot"></span><span id="modalTag"></span></span>
+        <span class="modal-divider" aria-hidden="true"></span>
+        <time class="modal-date" id="modalDate"></time>
+      </div>
+      <p class="modal-body" id="modalBody"></p>
+      <div class="modal-actions">
+        <button type="button" class="modal-action-btn" aria-label="메모 수정">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+          </svg>
+        </button>
+        <button type="button" class="modal-action-btn" aria-label="메모 삭제">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18"></path>
+            <path d="M8 6V4h8v2"></path>
+            <path d="M19 6l-1 14H6L5 6"></path>
+            <path d="M10 11v5M14 11v5"></path>
+          </svg>
+        </button>
+      </div>
+    </article>
+  </div>
 
   <script src="./js/memo.js"></script>
 </body>
