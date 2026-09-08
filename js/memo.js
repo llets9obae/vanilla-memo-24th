@@ -1,38 +1,5 @@
 const STORAGE_KEY = "vanilla-memo-list";
-const defaultMemoList = [
-  {
-    id: "memo-1",
-    title: "이것은 제목입니다",
-    content: "이것은 본문입니다 이것은 본문입니다 이것은 본문입니다 ...",
-    category: "Daily",
-    date: "2026.09.06",
-    pinned: true
-  },
-  {
-    id: "memo-2",
-    title: "이것은 제목입니다",
-    content: "이것은 본문입니다 이것은 본문입니다 이것은 본문입니다 ...",
-    category: "Work",
-    date: "2026.09.05",
-    pinned: false
-  },
-  {
-    id: "memo-3",
-    title: "이것은 제목입니다",
-    content: "이것은 본문입니다 이것은 본문입니다 이것은 본문입니다 ...",
-    category: "Others",
-    date: "2026.09.03",
-    pinned: true
-  },
-  {
-    id: "memo-4",
-    title: "이것은 제목입니다",
-    content: "이것은 본문입니다 이것은 본문입니다 이것은 본문입니다 ...",
-    category: "Daily",
-    date: "2026.09.01",
-    pinned: false
-  }
-];
+const defaultMemoList = [];
 
 function loadMemos() {
   const storedMemos = localStorage.getItem(STORAGE_KEY);

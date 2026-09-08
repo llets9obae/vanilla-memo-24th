@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 76px;
-  background: #F7D6D0;
+  background: #FBE6C2;
 }
 
 /* 상단 네비게이션 & 검색 영역 */
@@ -53,8 +53,8 @@ body {
   min-width: 116px;
   height: 36px;
   gap: 8px;
-  background-color: #F7D6D0;
-  color: #4A4A4A;
+  background-color: #FBE6C2;
+  color: #1F150C;
   font-size: 16px;
   font-weight: 800;
   padding: 6px 16px;
@@ -67,7 +67,7 @@ body {
 }
 
 .tag-badge:hover {
-  background-color: #E2B4BD;
+  background-color: #A77F60;
 }
 
 .tag-dot {
@@ -104,7 +104,7 @@ body {
 }
 
 .dot-others {
-  background-color: #BFC9D1;
+  background-color: #A77F60;
 }
 
 .tag-dropdown {
@@ -136,7 +136,8 @@ body {
 }
 
 .tag-dropdown li:hover {
-  background-color: #F1F5F9;
+  background-color: #A77F60;
+  color: #FFFFFF;
 }
 
 .search-input {
@@ -144,13 +145,13 @@ body {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #4A4A4A;
+  color: #1F150C;
   line-height: 24px;
   background: transparent;
 }
 
 .search-input::placeholder {
-  color: #BFC9D1;
+  color: #A77F60;
 }
 
 .icon-btn {
@@ -162,7 +163,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0F172A;
+  color: #1F150C;
   cursor: pointer;
   flex-shrink: 0;
   transition: transform 0.1s ease;
@@ -180,7 +181,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #0F172A;
+  color: #1F150C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,7 +296,7 @@ body {
 }
 
 .card-others {
-  background-color: #BFC9D1;
+  background-color: #A77F60;
   color: #FFFFFF;
 }
 
@@ -305,7 +306,7 @@ body {
   max-width: 1200px;
   height: 710px;
   min-height: 0;
-  border: 2px dashed #FDB5CE;
+  border: 2px dashed #A77F60;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -320,14 +321,14 @@ body {
 }
 
 .search-empty-area {
-  border-color: #4A4A4A;
+  border-color: #1F150C;
   gap: 20px;
 }
 
 .search-empty-icon {
   width: 96px;
   height: 96px;
-  background-color: #4A4A4A;
+  background-color: #1F150C;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -339,7 +340,7 @@ body {
 }
 
 .empty-title {
-  color: #4A4A4A;
+  color: #1F150C;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 8px;
@@ -355,7 +356,7 @@ body {
 .center-add-btn {
   width: 120px;
   height: 120px;
-  background-color: #FDB5CE;
+  background-color: #A77F60;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -372,7 +373,7 @@ body {
 }
 
 .empty-memo-text {
-  color: #FDB5CE;
+  color: #A77F60;
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
@@ -382,7 +383,7 @@ body {
 .search-empty-icon {
   width: 96px;
   height: 96px;
-  background-color: #4A4A4A;
+  background-color: #1F150C;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -395,7 +396,7 @@ body {
 }
 
 .empty-title {
-  color: #4A4A4A;
+  color: #1F150C;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -409,7 +410,7 @@ body {
 }
 
 #searchEmptyArea {
-  border-color: #4A4A4A;
+  border-color: #1F150C;
   gap: 20px;
 }
 
@@ -536,7 +537,7 @@ body {
 }
 
 .memo-form {
-  background-color: #BFC9D1;
+  background-color: #A77F60;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -553,7 +554,7 @@ body {
   border-radius: 10px;
   padding: 11px 12px;
   font: inherit;
-  color: #4A4A4A;
+  color: #1F150C;
   background: #FFFFFF;
   outline: none;
 }
@@ -569,7 +570,7 @@ body {
   border-radius: 10px;
   padding: 12px;
   color: #FFFFFF;
-  background: #4A4A4A;
+  background: #1F150C;
   font-weight: 700;
   cursor: pointer;
 }
