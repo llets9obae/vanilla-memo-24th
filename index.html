@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla Memo</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="search-container">
+      <div class="tag-filter-wrapper">
+        <button type="button" class="tag-badge" id="tagFilterBtn">
+          <span class="tag-dot" id="tagDot"></span>
+          <span id="selectedTagText">태그 선택</span>
+          <svg class="arrow-icon" width="16" height="13" viewBox="0 0 8 10" fill="currentColor">
+            <polygon points="0,0 8,5 0,10" />
+          </svg>
+        </button>
+      </div>
+      <input class="search-input" type="text" placeholder="원하는 메모를 검색하세요" aria-label="메모 검색" />
+      <button type="button" class="search-submit-btn" aria-label="검색">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+        </svg>
+      </button>
+    </div>
+    <button type="button" class="icon-btn add-btn" aria-label="메모 추가">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+    </button>
+    <button type="button" class="icon-btn" aria-label="내 계정">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8V21h19.2v-1.8c0-3.2-6.4-4.8-9.6-4.8z"/>
+      </svg>
+    </button>
+  </header>
+
+  <main class="memo-container">
+    <section class="memo-section">
+      <div class="card-grid" id="memoGrid"></div>
+      <div class="empty-area">
+        <div class="center-add-btn" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </div>
+        <p class="empty-memo-text">새로운 메모를 작성해보세요!</p>
+      </div>
+      <div class="empty-area search-empty-area" id="searchEmptyArea" hidden>
+        <div class="search-empty-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+          </svg>
+        </div>
+        <div class="empty-text-box">
+          <p class="empty-title">검색 결과가 없습니다</p>
+          <p class="empty-sub">다른 검색어로 다시 시도해 보세요.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/memo.js"></script>
+</body>
+</html>
